@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.App.MainPage"
+             BackgroundColor="White">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+       
+        <Entry x:Name="ResultDisplay"
+               FontSize="32"
+               HorizontalOptions="FillAndExpand"
+               IsReadOnly="True"
+               HorizontalTextAlignment="End"
+               Text="0" />
+
+        <Grid RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*">
+
+            
+            <Button Text="7" Grid.Row="0" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="8" Grid.Row="0" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="9" Grid.Row="0" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="÷" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="×" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="1" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="2" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="3" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="C" Clicked="OnClearClicked" Grid.Column="0" Grid.Row="3" />
+            <Button Text="0" Clicked="OnNumberClicked" Grid.Column="1" Grid.Row="3" />
+            <Button Text="=" Clicked="OnCalculateClicked" Grid.Column="2" Grid.Row="3" />
+            <Button Text="+" Clicked="OnOperatorClicked" Grid.Column="3" Grid.Row="3" />
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
+
